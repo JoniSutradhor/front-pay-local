@@ -31,7 +31,7 @@ const themesConfig = {
       },
       secondary: {
         light: '#818cf8',
-        main: '#4f46e5',
+        main: '#33A0BE',
         dark: '#3730a3',
         contrastText: darkPaletteText.primary,
       },
@@ -66,7 +66,7 @@ const themesConfig = {
       },
       secondary: {
         light: '#818cf8',
-        main: '#4f46e5',
+        main: '#33A0BE',
         dark: '#3730a3',
         contrastText: darkPaletteText.primary,
       },
