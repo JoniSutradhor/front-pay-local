@@ -1,4 +1,5 @@
-import SignUpPage from './SignUpPage';
+// import SignUpPage from './SignUpPage';
+import ClassicSignUpPage from './ClassicSignUpPage';
 import authRoles from '../../auth/authRoles';
 
 const SignUpConfig = {
@@ -27,7 +28,7 @@ const SignUpConfig = {
   routes: [
     {
       path: 'sign-up',
-      element: <SignUpPage />,
+      element: <ClassicSignUpPage />,
     },
   ],
 };
