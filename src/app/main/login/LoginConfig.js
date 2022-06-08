@@ -1,4 +1,4 @@
-import SignInPage from './SignInPage';
+import LoginPage from './LoginPage';
 import authRoles from '../../auth/authRoles';
 
 const SignInConfig = {
@@ -26,8 +26,8 @@ const SignInConfig = {
   auth: authRoles.onlyGuest,
   routes: [
     {
-      path: 'sign-in',
-      element: <SignInPage />,
+      path: 'login',
+      element: <LoginPage />,
     },
   ],
 };
