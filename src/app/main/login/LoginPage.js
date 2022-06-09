@@ -1,11 +1,7 @@
 import * as React from 'react';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Controller, useForm } from 'react-hook-form';
-import Button from '@mui/material/Button';
-import Checkbox from '@mui/material/Checkbox';
-import FormControl from '@mui/material/FormControl';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import TextField from '@mui/material/TextField';
+import { Input, Button, Checkbox, FormControl, TextField, FormControlLabel } from '@mui/material';
 import { Link } from 'react-router-dom';
 import * as yup from 'yup';
 import _ from '@lodash';
@@ -32,7 +28,6 @@ const defaultValues = {
 
 function LoginPage() {
   const [isCode, setIsCode] = React.useState(false);
-  console.log(isCode);
   const { control, formState, handleSubmit, reset } = useForm({
     mode: 'onChange',
     defaultValues,
@@ -74,10 +69,19 @@ function LoginPage() {
     return obj;
   };
 
+  // take one input and go to next input TODO
+    // const handleKeyDown = (e) => {
+    //     if (e.key === 'Enter') {
+    //         e.preventDefault();
+    //         e.stopPropagation();
+    //         document.getElementById('password').focus();
+    //     }
+    // };
+
 
   return (
     <div className="flex flex-col flex-auto items-center sm:justify-center min-w-0 md:p-32">
-      <Paper className="flex w-full sm:w-auto min-h-full sm:min-h-auto md:w-full md:max-w-6xl rounded-0 sm:rounded-2xl sm:shadow overflow-hidden">
+      <Paper className="flex w-full sm:w-auto min-h-full sm:min-h-auto md:w-full md:max-w-6xl rounded-0 sm:rounded-2xl sm:shadow overflow-hidden h-3xl">
         <div className="w-full sm:w-auto py-32 px-16 sm:p-48 md:p-64 ltr:border-r-1 rtl:border-l-1">
           {
             !!isCode === false && (
@@ -140,7 +144,7 @@ function LoginPage() {
                       )}
                     />
 
-                    <Link className="text-md font-medium login-page-no-underline" to="/pages/auth/forgot-password">
+                    <Link className="text-md font-medium login-page-no-underline" to="/forgot-password">
                       Forgot password?
                     </Link>
                   </div>
@@ -193,7 +197,7 @@ function LoginPage() {
             !!isCode === true && (
               <div className='w-full max-w-320 sm:w-320 mx-auto sm:mx-8'>
                 <div className='flex flex-col pb-92'>
-                  <div className='text-6xl font-semibold text-center mb-5'>Security Code</div>
+                  <div className='text-4xl font-semibold text-center mb-5'>Security Code</div>
                   <div className='text-16 leading-6 text-center pb-60'>A 5 digit code was sent to your email. Please type the code to continue.</div>
                   <div className='flex gap-5'>
                     <TextField
@@ -250,7 +254,7 @@ function LoginPage() {
         </div>
 
         <Box
-          className="relative hidden md:flex flex-auto items-end justify-end h-full p-48 overflow-hidden"
+          className="relative hidden md:flex flex-auto items-end justify-end  p-48 overflow-hidden"
           sx={{ backgroundColor: 'primary.main' }}
         >
           <svg
@@ -277,7 +281,7 @@ function LoginPage() {
               <div className="text-28 font-normal tracking-wider mb-12">Welcome to</div>
               <div className="text-7xl font-bold">Front Payment Go</div>
             </div>
-            <div className="mt-24 text-16 text-lg tracking-tight leading-6 text-gray-400 w-400 leading-6">
+            <div className="mt-24 text-lg tracking-tight text-gray-400 w-400 leading-6">
               Turpis nulla integer dui tempor mattis. Turpis semper in ante lacus sit interdum. Ut commodo donec dictum faucibus.
             </div>
           </div>
