@@ -12,6 +12,7 @@ import _ from "@lodash";
 import { Paper, Grid, Card, CardContent, CardHeader } from "@mui/material";
 import FormHelperText from "@mui/material/FormHelperText";
 import { Box } from "@mui/system";
+import '../../../styles/colors.css'
 
 /**
  * Form Validation Schema
@@ -54,6 +55,7 @@ function ClassicSignUpPage() {
   function onSubmit() {
     reset(defaultValues);
   }
+
 
   return (
     // <div className="flex flex-col flex-auto sm:justify-center min-w-0">
@@ -258,7 +260,7 @@ function ClassicSignUpPage() {
                 render={({ field }) => (
                   <FormControl className="items-center" error={!!errors.acceptTermsConditions}>
                     <FormControlLabel
-                      label="I accept the Terms & Conditions of Front Payment Go."
+                      label={<p>I accept the <span className="text-primary-500">Terms & Conditions</span> of Front Payment Go.</p>}
                       control={<Checkbox size="small" {...field} />}
                     />
                     <FormHelperText>{errors?.acceptTermsConditions?.message}</FormHelperText>
