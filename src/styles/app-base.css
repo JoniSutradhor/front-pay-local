@@ -102,7 +102,7 @@ a[role="button"] {
 }
 .login-custom-input > div > input {
   font-size: 40px;
-  border-bottom: 3px solid #000;
+  border-bottom: 2px solid #000;
   padding: 5px 17px;
   background-color: white;
   margin: auto;
