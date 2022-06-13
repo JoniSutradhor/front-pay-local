@@ -990,6 +990,7 @@ module.exports = {
       min: 'min-content',
       max: 'max-content',
       fit: 'fit-content',
+      '2xl_c': "69.8rem"
     }),
     inset: (theme, { negative }) => ({
       auto: 'auto',
